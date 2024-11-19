@@ -14,106 +14,122 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            background-image: url('images/Estadio campeon del siglo.jpg');
-            background-size: cover;
-            background-position: center;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            color: white;
-            overflow: hidden;
-        }
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Estadio campeon del siglo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fondo fijo para pantallas grandes */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    overflow: hidden;
+}
 
-        .invitation-container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
-        }
+.invitation-container {
+    width: 100%;
+    min-height: 100vh; /* Asegura que el contenedor cubra toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    padding: 10px; /* Espaciado extra para móviles */
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho */
+}
 
-        .invitation-content {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 30px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 700px;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-            animation: bounceIn 1.5s ease-out;
-        }
+.invitation-content {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px; /* Ajusta un máximo razonable para móviles */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    animation: bounceIn 1.5s ease-out;
+}
 
-        @keyframes bounceIn {
-            0% { transform: scale(0.8); opacity: 0; }
-            50% { transform: scale(1.1); opacity: 1; }
-            100% { transform: scale(1); }
-        }
+.invitation-title {
+    font-size: 32px; /* Reduce tamaño en pantallas pequeñas */
+    margin-bottom: 15px;
+    color: #FFD700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
 
-        .logo {
-            width: 120px;
-            margin-bottom: 15px;
-            animation: spin 5s linear infinite;
-        }
+.event-details {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.4;
+}
 
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+.cta {
+    padding: 10px 20px; /* Ajusta tamaño del botón */
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #FFD700;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
 
-        .invitation-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 45px;
-            margin-bottom: 10px;
-            color: #FFD700;
-            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
-        }
+.cta:hover {
+    background-color: #FFB800;
+}
 
-        .event-details {
-            font-size: 20px;
-            margin: 15px 0;
-            line-height: 1.5;
-        }
+/* Animaciones */
+.logo {
+    width: 120px;
+    margin-bottom: 15px;
+    animation: spin 5s linear infinite;
+}
 
-        .event-details span {
-            font-weight: bold;
-            color: #FFD700;
-        }
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-        .personal-message {
-            font-size: 22px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
 
-        .cta {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #FFD700;
-            color: #000;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
+.emojis {
+    font-size: 26px;
+    margin-top: 15px;
+    animation: float 2s ease-in-out infinite alternate;
+}
 
-        .cta:hover {
-            background-color: #FFB800;
-        }
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
 
-        .emojis {
-            font-size: 26px;
-            margin-top: 15px;
-            animation: float 2s ease-in-out infinite alternate;
-        }
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Cambia a contener el fondo para móviles */
+        background-attachment: scroll; /* Mejora el rendimiento desactivando fondo fijo */
+    }
 
-        @keyframes float {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
-        }
+    .invitation-content {
+        padding: 15px;
+    }
+
+    .invitation-title {
+        font-size: 26px;
+    }
+
+    .event-details {
+        font-size: 16px;
+    }
+
+    .cta {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
     </style>
 </head>
 <body>
