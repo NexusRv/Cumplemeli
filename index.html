@@ -7,17 +7,19 @@
     <meta name="description" content="Ven a celebrar el cumpleaños de Melina con amigos, familia y pasión por Peñarol. ¡Te esperamos!">
     <meta property="og:title" content="Invitación al Cumpleaños de Melina">
     <meta property="og:description" content="Un día especial lleno de sorpresas y momentos únicos. ¡No faltes!">
-    <meta property="og:image" content="assets/logo-penarol.jpg"> <!-- Actualiza con la ruta local -->
-    <meta property="og:url" content="https://tulinkgithub.io"> <!-- Actualiza con tu enlace de GitHub -->
-    <meta name="theme-color" content="#000000">
+    <meta property="og:image" content="assets/Peñarol.png">
+    <meta property="og:url" content="https://tulinkgithub.io">
+    <meta name="theme-color" content="#FFD700">
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-image: url('assets/fondo-estadio.jpg'); /* Ruta local */
+            background-image: url('images/Estadio campeon del siglo.jpg');
             background-size: cover;
             background-position: center;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+            overflow: hidden;
         }
 
         .invitation-container {
@@ -26,44 +28,48 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
-            color: white;
-            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
         }
 
         .invitation-content {
-            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro */
+            background: rgba(0, 0, 0, 0.9);
             padding: 30px;
-            border-radius: 15px;
-            width: 80%;
+            border-radius: 20px;
+            width: 90%;
             max-width: 700px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 1.5s ease-in-out;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+            animation: bounceIn 1.5s ease-out;
         }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
         }
 
         .logo {
-            width: 150px;
-            margin-bottom: 20px;
+            width: 120px;
+            margin-bottom: 15px;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .invitation-title {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 40px;
+            margin-bottom: 10px;
             color: #FFD700;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
         }
 
         .event-details {
-            font-size: 18px;
-            margin: 10px 0;
-            line-height: 1.8;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            font-size: 20px;
+            margin: 15px 0;
+            line-height: 1.5;
         }
 
         .event-details span {
@@ -72,25 +78,54 @@
         }
 
         .personal-message {
-            margin-top: 20px;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
-            color: #FFF;
-            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            background-color: #FFD700;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #FFD700;
+        }
+
+        .emojis {
+            font-size: 26px;
+            margin-top: 15px;
+            animation: float 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
         }
     </style>
 </head>
 <body>
     <div class="invitation-container">
         <div class="invitation-content">
-            <img src="assets/logo-penarol.jpg" alt="Logo Peñarol" class="logo">
-            <h1 class="invitation-title">¡Estás Invitado al Cumpleaños de Melina!</h1>
+            <img src="assets/Peñarol.png" alt="Logo Peñarol" class="logo">
+            <h1 class="invitation-title">🎉 ¡Cumpleaños de Melina! 🎂</h1>
             <div class="event-details">
                 <p><span>Fecha:</span> 3 de diciembre de 2024</p>
-                <p><span>Hora:</span> 18:00 hs</p>
+                <p><span>Hora:</span> 17:00 hs</p>
                 <p><span>Lugar:</span> Bella Unión 5036, Las Piedras</p>
             </div>
-            <p class="personal-message">Te esperamos para celebrar este día tan especial con muchos amigos, familia y ¡PEÑAROL PEÑAROL!</p>
+            <p class="personal-message">¡Te esperamos para una tarde llena de diversión, risas y pasión por Peñarol! 🖤💛</p>
+            <div class="emojis">⚽🎁🎈🍰</div>
+            <a href="https://confirmar-asistencia-link.com" class="cta-button">¡Confirma tu asistencia!</a>
         </div>
     </div>
 </body>
